@@ -1,4 +1,4 @@
-// main.dart
+
 import 'package:aplicacion_peliculas/screens/catalogo.dart';
 import 'package:aplicacion_peliculas/screens/registro.dart';
 import 'package:aplicacion_peliculas/screens/sesion.dart';
