@@ -32,8 +32,8 @@ class Pantalla3 extends StatelessWidget {
             return GridView.builder(
               padding: const EdgeInsets.all(8),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3, // CAMBIO: Ahora 3 columnas para que sean más pequeñas
-                childAspectRatio: 0.65, // Ajuste de proporción para pósters más estilizados
+                crossAxisCount: 3, 
+                childAspectRatio: 0.65,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
               ),
@@ -54,7 +54,7 @@ class Pantalla3 extends StatelessWidget {
     return GestureDetector(
       onTap: () => _mostrarDetalles(context, item),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(4), // Bordes menos redondeados, más tipo Netflix
+        borderRadius: BorderRadius.circular(4), 
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(

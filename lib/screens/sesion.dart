@@ -1,4 +1,4 @@
-// sesion.dart
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:aplicacion_peliculas/screens/catalogo.dart'; 
@@ -9,7 +9,7 @@ class Loginscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black, // Fondo negro de Netflix
+      backgroundColor: Colors.black, 
       appBar: AppBar(
         title: const Text("Iniciar Sesión"),
         backgroundColor: Colors.black,
@@ -30,7 +30,7 @@ Widget formulario(context) {
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      // Campo de Correo
+   
       TextField(
         controller: _correo, 
         style: const TextStyle(color: Colors.white),
@@ -38,7 +38,7 @@ Widget formulario(context) {
           labelText: "Correo Electrónico",
           labelStyle: const TextStyle(color: Colors.grey),
           filled: true,
-          fillColor: const Color(0xFF333333), // Gris oscuro de inputs
+          fillColor: const Color(0xFF333333), 
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(5),
             borderSide: BorderSide.none,
@@ -63,13 +63,13 @@ Widget formulario(context) {
         ),
       ),
       const SizedBox(height: 30),
-      // Botón Rojo de Netflix
+   
       SizedBox(
         width: double.infinity,
         height: 50,
         child: FilledButton(
           style: FilledButton.styleFrom(
-            backgroundColor: const Color(0xFFE50914), // Rojo Netflix
+            backgroundColor: const Color(0xFFE50914), 
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5),
             ),

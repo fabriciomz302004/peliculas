@@ -1,11 +1,12 @@
 // main.dart
 import 'package:aplicacion_peliculas/screens/catalogo.dart';
 import 'package:aplicacion_peliculas/screens/registro.dart';
+import 'package:aplicacion_peliculas/screens/sesion.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-// Importa tus pantallas (asegúrate de que las rutas de los archivos sean correctas)
-import 'package:aplicacion_peliculas/sesion.dart';
+
+
 
 
 void main() async {
@@ -26,15 +27,15 @@ class MiApp extends StatelessWidget {
       title: 'NETXI',
       theme: ThemeData(
         brightness: Brightness.dark,
-        scaffoldBackgroundColor: Colors.black, // Fondo negro Netflix
+        scaffoldBackgroundColor: Colors.black, 
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.black,
           elevation: 0,
         ),
       ),
-      // Definimos la pantalla inicial
+     
       home: const Cuerpo(),
-      // Mapeo de rutas para navegación por nombre
+      
       routes: {
         '/login': (context) => const Loginscreen(),
         '/registro': (context) => const Registroscreen(),
@@ -79,7 +80,7 @@ class Cuerpo extends StatelessWidget {
               style: TextStyle(color: Colors.grey),
             ),
             const SizedBox(height: 50),
-            // Botones estilizados
+           
             botones(context),
             const SizedBox(height: 20),
             
@@ -96,7 +97,7 @@ Widget botones(context) {
     children: [
       ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: const Color(0xFFE50914), // Rojo Netflix
+          backgroundColor: const Color(0xFFE50914), 
           padding: const EdgeInsets.symmetric(vertical: 15),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         ),

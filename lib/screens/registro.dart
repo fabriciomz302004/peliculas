@@ -1,4 +1,4 @@
-// registro.dart
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:aplicacion_peliculas/screens/sesion.dart'; 
@@ -9,7 +9,7 @@ class Registroscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black, // Fondo negro
+      backgroundColor: Colors.black, 
       appBar: AppBar(
         title: const Text("Crear Cuenta"),
         backgroundColor: Colors.black,
