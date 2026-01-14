@@ -2,59 +2,61 @@
   "peliculas": [
     {
       "id": "MOV001",
-      "titulo": "Origen",
+      "titulo": "Pokemon: The First Movie",
       "genero": [
-        "Ciencia Ficción",
-        "Thriller"
+        "Animación",
+        "Aventura"
       ],
-      "director": "Christopher Nolan",
+      "director": "Kunihiko Yuyama",
       "precio": {
         "moneda": "USD",
         "real": 14.99
       },
-      "lanzamiento": "16 de julio de 2010",
-      "anio": 2010,
-      "descripcion": "Un ladrón que roba secretos corporativos mediante el uso de la tecnología de compartir sueños recibe la tarea inversa de plantar una idea en la mente de un CEO.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/origen.jpg",
-      "valoracion": 8.0,
+      "lanzamiento": "18 de julio de 1999",
+      "anio": 1999,
+      "youtube_id": "egDYQSUEsHg",
+      "descripcion": "Ash Ketchum y sus amigos viajan a las Islas Orange para competir en una liga Pokémon, pero se enfrentan a un equipo Rocket y a Mewtwo.",
+      "imagen": "https://i.redd.it/yr4nu4xatci91.jpg",
+      "video": "https://ia801407.us.archive.org/30/items/pokemon-peliculas-1/pokemon%20pelicula%201.mp4",
+      "valoracion": 7.5,
       "opiniones": {
         "opiniones_positivas": {
           "cantidad": 4,
           "detalles": [
             {
-              "opinion": "Una obra maestra del cine moderno.",
+              "opinion": "Una aventura emocionante para fans de Pokemon.",
               "sentimiento": "positivo",
               "detalles_usuario": {
-                "usuario": "Skywalker99",
+                "usuario": "AshFan99",
                 "fecha": "2023-08-15",
-                "puntuacion": 9
-              }
-            },
-            {
-              "opinion": "Increíblemente innovadora y emocionante.",
-              "sentimiento": "positivo",
-              "detalles_usuario": {
-                "usuario": "NeoTheChosen",
-                "fecha": "2023-07-10",
-                "puntuacion": 10
-              }
-            },
-            {
-              "opinion": "Una película que te hace pensar, me encanta.",
-              "sentimiento": "positivo",
-              "detalles_usuario": {
-                "usuario": "DarkKnightX",
-                "fecha": "2023-06-02",
                 "puntuacion": 8
               }
             },
             {
-              "opinion": "Nolan en su mejor momento, la mejor película de ciencia ficción.",
+              "opinion": "Mewtwo es un villano increíble.",
               "sentimiento": "positivo",
               "detalles_usuario": {
-                "usuario": "CineMaster2000",
-                "fecha": "2023-09-18",
+                "usuario": "PikaLover",
+                "fecha": "2023-07-10",
                 "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "La música y la animación son geniales.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "TrainerX",
+                "fecha": "2023-06-02",
+                "puntuacion": 7
+              }
+            },
+            {
+              "opinion": "Clásico de la infancia.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "GottaCatchEmAll",
+                "fecha": "2023-09-18",
+                "puntuacion": 8
               }
             }
           ]
@@ -63,12 +65,12 @@
           "cantidad": 1,
           "detalles": [
             {
-              "opinion": "Demasiado complicada para seguir, no me atrapó.",
+              "opinion": "Un poco infantil para adultos.",
               "sentimiento": "negativo",
               "detalles_usuario": {
-                "usuario": "LostInSpace33",
+                "usuario": "AdultViewer",
                 "fecha": "2023-05-28",
-                "puntuacion": 4
+                "puntuacion": 5
               }
             }
           ]
@@ -89,8 +91,10 @@
       },
       "lanzamiento": "18 de julio de 2008",
       "anio": 2008,
+      "youtube_id": "J0H7Du2txOE",
       "descripcion": "Cuando la amenaza conocida como el Joker causa estragos y caos en la ciudad de Gotham, Batman debe enfrentarlo para luchar contra la injusticia.",
       "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/caballero_oscuro.jpg",
+      "video": "https://dn710008.ca.archive.org/0/items/the-new-batman-adventures-episode-23-beware-the-creeper/Batman%20The%20Animated%20Series%20Episode%2050%20Zatanna.mp4",
       "valoracion": 9.3,
       "opiniones": {
         "opiniones_positivas": {
