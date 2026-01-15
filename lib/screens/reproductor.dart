@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:chewie/chewie.dart'; // Importa Chewie
+import 'package:chewie/chewie.dart'; 
 
 class Reproductor extends StatefulWidget {
   final String urlVideo;
@@ -14,7 +14,7 @@ class Reproductor extends StatefulWidget {
 
 class _ReproductorState extends State<Reproductor> {
   late VideoPlayerController _videoPlayerController;
-  ChewieController? _chewieController; // El controlador de los controles
+  ChewieController? _chewieController; 
 
   @override
   void initState() {
@@ -23,24 +23,24 @@ class _ReproductorState extends State<Reproductor> {
   }
 
   Future<void> _initializePlayer() async {
-    // 1. Inicializamos el controlador del video (tu código base)
+   
     _videoPlayerController = VideoPlayerController.networkUrl(Uri.parse(widget.urlVideo));
 
     await _videoPlayerController.initialize();
 
-    // 2. Configuramos Chewie con los controles que pediste
+   
     _chewieController = ChewieController(
       videoPlayerController: _videoPlayerController,
       autoPlay: true,
       looping: false,
       aspectRatio: _videoPlayerController.value.aspectRatio,
       
-      // Personalización de controles
-      allowFullScreen: true, // Botón de pantalla completa
-      allowPlaybackSpeedChanging: true, // Cambiar velocidad
-      showControls: true, // Mostrar barra de tiempo y botones
+     
+      allowFullScreen: true,
+      allowPlaybackSpeedChanging: true, 
+      showControls: true, 
       
-      // Estilo visual
+      
       materialProgressColors: ChewieProgressColors(
         playedColor: Colors.red,
         handleColor: Colors.red,
@@ -56,7 +56,7 @@ class _ReproductorState extends State<Reproductor> {
 
   @override
   void dispose() {
-    // Cerramos ambos controladores para evitar fugas de memoria
+    
     _videoPlayerController.dispose();
     _chewieController?.dispose();
     super.dispose();
@@ -74,7 +74,7 @@ class _ReproductorState extends State<Reproductor> {
       body: Center(
         child: _chewieController != null &&
                 _chewieController!.videoPlayerController.value.isInitialized
-            ? Chewie(controller: _chewieController!) // Renderiza el video con controles
+            ? Chewie(controller: _chewieController!) 
             : const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

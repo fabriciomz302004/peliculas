@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart'; // Importante para Realtime DB
+import 'package:firebase_database/firebase_database.dart'; 
 import 'package:aplicacion_peliculas/screens/sesion.dart'; 
 
 class Registroscreen extends StatelessWidget {
@@ -25,12 +25,12 @@ class Registroscreen extends StatelessWidget {
 }
 
 Widget formulario(BuildContext context) {
-  // Usamos nombres cortos para los controladores como en tu ejemplo
-  final TextEditingController n = TextEditingController(); // nombre
-  final TextEditingController e = TextEditingController(); // edad
-  final TextEditingController c = TextEditingController(); // ciudad
-  final TextEditingController mail = TextEditingController(); // correo
-  final TextEditingController pass = TextEditingController(); // contrasenia
+  
+  final TextEditingController n = TextEditingController(); 
+  final TextEditingController e = TextEditingController(); 
+  final TextEditingController c = TextEditingController(); 
+  final TextEditingController mail = TextEditingController();
+  final TextEditingController pass = TextEditingController(); 
 
   return Column(
     children: [
@@ -48,14 +48,14 @@ Widget formulario(BuildContext context) {
         child: FilledButton(
           style: FilledButton.styleFrom(backgroundColor: const Color(0xFFE50914)),
           onPressed: () {
-            // Validamos que no envíe campos vacíos
+          
             if(n.text.isEmpty || mail.text.isEmpty || pass.text.isEmpty){
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(content: Text("Por favor, llena todos los campos"))
               );
               return;
             }
-            // Llamamos a la función registro
+            
             registro(n.text, e.text, c.text, mail.text, pass.text, context);
           },
           child: const Text("REGISTRARSE", style: TextStyle(fontWeight: FontWeight.bold)),
@@ -65,7 +65,7 @@ Widget formulario(BuildContext context) {
   );
 }
 
-// Widget auxiliar para los campos de texto
+
 Widget _campo(String label, TextEditingController controller, IconData icono, {bool ocultar = false, TextInputType teclado = TextInputType.text}) {
   return Padding(
     padding: const EdgeInsets.only(bottom: 15),
@@ -88,14 +88,13 @@ Widget _campo(String label, TextEditingController controller, IconData icono, {b
 
 Future<void> registro(String nombre, String edad, String ciudad, String correo, String contrasenia, BuildContext context) async {
   try {
-    // 1. Crear el usuario en Firebase Authentication
+   
     UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: correo.trim(),
       password: contrasenia.trim(),
     );
 
-    // 2. Guardar datos en Realtime Database (usando la lógica que ya te funciona)
-    // Ruta: usuarios / UID_DEL_USUARIO
+    
     DatabaseReference baseDeDatos = FirebaseDatabase.instance.ref("usuarios/${userCredential.user!.uid}");
     
     await baseDeDatos.set({
@@ -107,7 +106,7 @@ Future<void> registro(String nombre, String edad, String ciudad, String correo, 
       "fecha_registro": DateTime.now().toString()
     });
 
-    // 3. Redirigir al Login
+   
     if (context.mounted) {
       Navigator.pushReplacement(
         context, 

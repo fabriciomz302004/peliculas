@@ -7,7 +7,7 @@ class PerfilScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Obtenemos el UID del usuario actual para buscar su info específica
+    
     final String uid = FirebaseAuth.instance.currentUser!.uid;
     final DatabaseReference userRef = FirebaseDatabase.instance.ref("usuarios/$uid");
 
@@ -25,7 +25,7 @@ class PerfilScreen extends StatelessWidget {
           }
 
           if (snapshot.hasData && snapshot.data!.snapshot.value != null) {
-            // Extraemos los datos
+            
             Map<dynamic, dynamic> datos = snapshot.data!.snapshot.value as Map;
 
             return Center(

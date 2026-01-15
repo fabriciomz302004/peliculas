@@ -17,7 +17,7 @@ class _TrailerScreenState extends State<TrailerScreen> {
   @override
   void initState() {
     super.initState();
-    // Configuración especial para Web e Iframe
+    
     _controller = YoutubePlayerController.fromVideoId(
       videoId: widget.youtubeId,
       autoPlay: true,

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:aplicacion_peliculas/screens/reproductor.dart'; 
 import 'package:aplicacion_peliculas/screens/perfil.dart'; 
-// Importamos la nueva pantalla que crearemos abajo
 import 'package:aplicacion_peliculas/screens/trailer_screen.dart'; 
 
 class Pantalla3 extends StatelessWidget {
@@ -77,7 +76,7 @@ class Pantalla3 extends StatelessWidget {
                 overflow: TextOverflow.ellipsis),
             const SizedBox(height: 25),
             
-            // BOTÓN VER PELÍCULA
+            
             _botonPersonalizado("VER AHORA", Colors.red, () {
               Navigator.pop(context);
               Navigator.push(context, MaterialPageRoute(
@@ -87,9 +86,9 @@ class Pantalla3 extends StatelessWidget {
 
             const SizedBox(height: 12),
 
-            // BOTÓN VER TRÁILER - Esta es la clave para que no se congele
+           
             _botonBorde("VER TRÁILER", () {
-              Navigator.pop(context); // Cierra el modal para liberar memoria
+              Navigator.pop(context); 
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) => TrailerScreen(
                   youtubeId: item['youtube_id'] ?? "dQw4w9WgXcQ",
